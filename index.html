@@ -14,6 +14,7 @@
   <body ng-controller="ToDoListController as toDoCtrl">
     <div>
       To Do List
+      <div id="taskCount">Tasks: {{toDoCtrl.taskArray.length}}</div>
       <form ng-submit="toDoCtrl.addTask()">
         <input type="text" placeholder="Enter task here" ng-model="toDoCtrl.newTask">
         <input type="submit" id="addButton" value="Add Task"> {{ toDoCtrl.searchTerm }}

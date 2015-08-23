@@ -47,6 +47,11 @@ describe('To Do List creator', function() {
     expect(tasks.count()).toEqual(1);
   })
 
+  it('can display a count of tasks', function() {
+    addTasks(['practise violin', 'buy potatoes']);
+    expect(element(by.id('taskCount')).getText()).toContain('Tasks: 2');
+  })
+
   var addTasks = function(tasks) {
     tasks.forEach(function(task) {
       entryField.sendKeys(task);
