@@ -13,6 +13,16 @@ toDoList.controller('ToDoListController', [function() {
     }
   }
 
+  self.clearCompleteTasks = function() {
+    arr = self.taskArray
+    self.taskArray = []
+    arr.forEach(function(task) {
+      if(task.complete === false) {
+        self.taskArray.push(task);
+      }
+    });
+  };
+
   self.clearAllTasks = function() {
     self.taskArray = []
   }

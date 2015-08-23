@@ -3,6 +3,7 @@ describe('To Do List creator', function() {
   var entryField = element(by.model('toDoCtrl.newTask'));
   var addButton = element(by.id('addButton'));
   var tasks = element.all(by.repeater('task in toDoCtrl.taskArray'));
+  var clearCompleteTasksButton = element(by.id('clearCompleteTasksButton'));
   var clearAllTasksButton = element(by.id('clearAllTasksButton'));
 
   beforeEach(function() {
@@ -37,6 +38,13 @@ describe('To Do List creator', function() {
     addTasks(['practise violin', 'buy potatoes']);
     clearAllTasksButton.click();
     expect(tasks.count()).toEqual(0);
+  })
+
+  it('can clear complete tasks', function() {
+    addTasks(['practise violin', 'buy potatoes']);
+    element(by.model('task.complete')).click();
+    clearCompleteTasksButton.click();
+    expect(tasks.count()).toEqual(1);
   })
 
   var addTasks = function(tasks) {
