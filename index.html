@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>To Do List</title>
+    <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="js/app.js"></script>
     <script src="js/toDoController.js"></script>
   </head>
@@ -26,7 +28,8 @@
       <button id="clearAllTasksButton" ng-click="toDoCtrl.clearAllTasks()">Clear All Tasks</button>
       <ul class="list-group" ng-repeat="task in toDoCtrl.taskArray | filter:filterCriteria">
         <li>
-          <input type="checkbox" ng-model="task.complete"/> {{task.descr}}
+          <input type="checkbox" ng-model="task.complete"/>
+          <a href="#" editable-text="task.descr">{{ task.descr || "empty" }}</a>
         </li>
       </ul>
     </div>

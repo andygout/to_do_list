@@ -91,13 +91,13 @@ Site setup:
 - Add to dependencies in `js/app.js`:
 
 ````js
-var app = angular.module("app", ["xeditable"]);
+var toDoList = angular.module('ToDoListApp', ['ngResource', 'xeditable']);
 ````
 
 - `index.html` - reference in head:
 
 ````html
-<link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+<link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css">
 <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
 ````
 
@@ -116,7 +116,7 @@ var app = angular.module("app", ["xeditable"]);
 </li>
 ````
 
-- Add as dependency to `bower.json` and include in `karma.conf.js` files
+- Add as dependency to `bower.json` file and include in `karma.conf.js` file
 
 
 #### Run site (not on server)
