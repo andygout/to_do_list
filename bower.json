@@ -1,0 +1,26 @@
+{
+  "name": "to_do_list",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andygout/to_do_list",
+  "authors": [
+    "andygout <andygout@hotmail.co.uk>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.4",
+    "angular-resource": "~1.4.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.4",
+    "angular-route": "~1.4.4"
+  }
+}
