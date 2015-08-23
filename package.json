@@ -1,28 +1,37 @@
 {
   "name": "to_do_list",
   "version": "1.0.0",
-  "description": "[![Build Status](https://travis-ci.org/andygout/to_do_list.png)](https://travis-ci.org/andygout/to_do_list)",
+  "description": "To Do List",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/andygout/to_do_list.git"
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8080 -c-1",
+    "pretest": "npm install",
+    "test": "karma start ./test/karma.conf.js",
+    "test-single-run": "karma start ./test/karma.conf.js  --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor ./test/e2e/protractor.conf.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andygout/to_do_list/issues"
-  },
-  "homepage": "https://github.com/andygout/to_do_list",
   "devDependencies": {
     "bower": "^1.4.1",
+    "npm": "^2.7.5",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.9",
     "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
     "karma-jasmine": "^0.3.6",
+    "karma-junit-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^0.2.1",
-    "phantomjs": "^1.9.18"
+    "phantomjs": "^1.9.18",
+    "protractor": "^2.1.0"
+  },
+  "dependencies": {
+    "bower": "^1.4.1",
+    "http-server": "^0.8.0"
   }
 }

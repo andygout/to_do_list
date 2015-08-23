@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/andygout/to_do_list.png)](https://travis-ci.org/andygout/to_do_list)
+
 To Do List
 =================
 
