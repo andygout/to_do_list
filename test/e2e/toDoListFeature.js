@@ -4,6 +4,7 @@ describe('To Do List creator', function() {
   var addButton = element(by.id('addButton'));
   var tasks = element.all(by.repeater('task in toDoCtrl.taskArray'));
   var displayAllTasksButton = element(by.id('displayAllTasksButton'));
+  var displayActiveTasksButton = element(by.id('displayActiveTasksButton'));
   var displayCompleteTasksButton = element(by.id('displayCompleteTasksButton'));
   var clearCompleteTasksButton = element(by.id('clearCompleteTasksButton'));
   var clearAllTasksButton = element(by.id('clearAllTasksButton'));
@@ -65,6 +66,13 @@ describe('To Do List creator', function() {
     addTasks(['practise violin', 'buy potatoes', 'do exercises', 'feed dog']);
     displayCompleteTasksButton.click();
     expect(tasks.count()).toEqual(0);
+  })
+
+  it('can apply filter to display active tasks', function() {
+    addTasks(['practise violin', 'buy potatoes', 'do exercises', 'feed dog']);
+    element(by.model('task.complete')).click();
+    displayActiveTasksButton.click();
+    expect(tasks.count()).toEqual(3);
   })
 
   var addTasks = function(tasks) {

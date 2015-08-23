@@ -20,6 +20,7 @@
         <input type="submit" id="addButton" value="Add Task"> {{ toDoCtrl.searchTerm }}
       </form>
       <button id="displayAllTasksButton" ng-click="filterCriteria = none">Display All Tasks</button>
+      <button id="displayActiveTasksButton" ng-click="filterCriteria = {complete:false}">Display Active Tasks</button>
       <button id="displayCompleteTasksButton" ng-click="filterCriteria = {complete:true}">Display Complete Tasks</button>
       <button id="clearCompleteTasksButton" ng-click="toDoCtrl.clearCompleteTasks()">Clear Complete Tasks</button>
       <button id="clearAllTasksButton" ng-click="toDoCtrl.clearAllTasks()">Clear All Tasks</button>
