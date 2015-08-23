@@ -18,6 +18,7 @@
         <input type="text" placeholder="Enter task here" ng-model="toDoCtrl.newTask">
         <input type="submit" id="addButton" value="Add Task"> {{ toDoCtrl.searchTerm }}
       </form>
+      <button id="clearAllTasksButton" ng-click="toDoCtrl.clearAllTasks()">Clear All Tasks</button>
       <ul class="list-group" ng-repeat="task in toDoCtrl.taskArray">
         <li>
           {{task.descr}}

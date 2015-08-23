@@ -13,4 +13,8 @@ toDoList.controller('ToDoListController', [function() {
     }
   }
 
+  self.clearAllTasks = function() {
+    self.taskArray = []
+  }
+
 }]);
