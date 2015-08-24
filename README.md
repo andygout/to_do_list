@@ -207,9 +207,9 @@ Running site on [Express](http://expressjs.com/) server:
 - `$ npm install express --save`
 - Save Express in the dependencies list in `package.json`: `"express": "^4.13.3"`
 - Create `server.js` file in root directory with [contents](https://github.com/andygout/to_do_list/blob/master/server.js) as per this codebase
-- Create new folder `public` in root and relocate `js`, `style` and `bower_components` directories into it (ensure `karma.conf.js` and `.gitignore` file routes for `bower_components` directory is changed accordingly)
+- Create new folder `public` in root and relocate `js`, `style` and `bower_components` directories into it (ensure `karma.conf.js` file amends routes for `bower_components` accordingly and create `.bowerrc` in root with following content: `{"directory" : "public/bower_components"}`)
 - `test/e2e/toDoListFeature.js` will need to change port from 8080 to that required by Express: 3000
-- `package.json` file: "scripts": "start" will now need `node server/js`
+- `package.json` file: "scripts": "start" will now need `node server.js`
 - NB: Running site without a server will no longer work once local server has been established
 - Run server: `$ node server.js`
 - View site at: [http://localhost:3000](http://localhost:3000)
@@ -290,3 +290,19 @@ Links:
 [Github - Makers Academy: Protractor for GitHub Profiles](https://github.com/makersacademy/course/blob/master/further_javascript/protractor.md)
 
 [Angular-xeditable](http://vitalets.github.io/angular-xeditable/)
+
+
+Images:
+-------
+
+#### Empty list
+![Empty list](readme_imgs/empty_list.png)
+
+#### All tasks
+![All tasks](readme_imgs/all_tasks.png)
+
+#### Active tasks filter applied
+![Active tasks](readme_imgs/active_tasks.png)
+
+#### Complete tasks filter applied
+![Complete tasks](readme_imgs/complete_tasks.png)
