@@ -301,6 +301,9 @@ Images:
 #### All tasks
 ![All tasks](readme_imgs/all_tasks.png)
 
+#### Editable text
+![Editable text](readme_imgs/editable_text.png)
+
 #### Active tasks filter applied
 ![Active tasks](readme_imgs/active_tasks.png)
 
