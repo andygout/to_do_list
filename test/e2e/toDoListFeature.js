@@ -10,7 +10,7 @@ describe('To Do List creator', function() {
   var clearAllTasksButton = element(by.id('clearAllTasksButton'));
 
   beforeEach(function() {
-    browser.get('http://localhost:8080');
+    browser.get('http://localhost:3000');
   })
 
   it('has a title', function() {
