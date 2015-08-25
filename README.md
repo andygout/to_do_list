@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/andygout/to_do_list.png)](https://travis-ci.org/andygout/to_do_list)
+[![Build Status](https://travis-ci.org/andygout/to_do_list.png)](https://travis-ci.org/andygout/to_do_list) [![Code Climate](https://codeclimate.com/github/andygout/to_do_list/badges/gpa.svg)](https://codeclimate.com/github/andygout/to_do_list)
 
 To Do List
 =================
