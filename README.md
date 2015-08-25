@@ -12,6 +12,12 @@ Build a To Do List as a mini front-end SPA (Single Page Application).
 ![To Do List Balsamiq Mockup](readme_imgs/balsamiq_mockup.png)
 
 
+Live demo on Heroku
+-------
+
+[To Do List](https://vast-oasis-2226.herokuapp.com/)
+
+
 User stories:
 -------
 
@@ -258,7 +264,6 @@ Deploying to [Heroku](https://devcenter.heroku.com/articles/git)
 -------
 
 - `$ heroku create`
-- Ensure `bower_components` is removed from `.gitignore` file
 - `$ git push heroku master`
 
 
